@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Channel</title>
+    <style>
+        /* Page style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            overflow: hidden;
+            background-color: #000; /* Black 4K background */
+        }
+
+        /* Background cube animation */
+        .cube {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #6e6eff, #00e0ff);
+            transform-style: preserve-3d;
+            animation: rotateCube 6s linear infinite;
+        }
+
+        .cube::before,
+        .cube::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #6e6eff, #00e0ff);
+            top: 0;
+            left: 0;
+            transform-origin: center;
+        }
+
+        .cube::before {
+            transform: rotateX(90deg);
+        }
+
+        .cube::after {
+            transform: rotateY(90deg);
+        }
+
+        @keyframes rotateCube {
+            0% { transform: rotate3d(1, 1, 0, 0deg); }
+            100% { transform: rotate3d(1, 1, 0, 360deg); }
+        }
+
+        /* Content styling */
+        .container {
+            text-align: center;
+            padding: 20px;
+            z-index: 1; /* Place content above cube */
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 0.2em;
+            color: #FFFFFF; /* Deep white color */
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #CCCCCC, 0 0 20px #999999;
+            }
+            100% {
+                text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #CCCCCC, 0 0 40px #999999;
+            }
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+
+        .footer {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3D Cube Animation -->
+    <div class="cube"></div>
+
+    <div class="container">
+        <!-- Telegram Channel Name with Deep White Animation -->
+        <h1>Premium Things By Alonê&S'M☠️</h1>
+        
+        <!-- Bio -->
+        <p>All Premium app free here and any website programming code free.</p>
+        
+        <!-- Developer Credit -->
+        <div class="footer">Developer: SM SOAD</div>
+    </div>
+</body>
+</html>
